@@ -1,0 +1,211 @@
+ls -a
+Remove the .git file
+
+rm -rf .git
+Now initialize git repo.
+
+git init 
+and
+
+git add .
+
+$ ll
+
+$ git status
+
+$ git init
+Initialized empty Git repository in D:/kaushal/MYBANKPROJ/.git/
+
+total 25
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 09:55 ./
+drwxr-xr-x 1 ADMIN 197121  0 Feb  7 10:16 ../
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 10:03 .git/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  6 13:09 .metadata/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  2 20:00 ClientApp/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  2 19:34 JavaMailApp/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 09:40 PaginationApps/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  6 12:56 Provider/
+-rw-r--r-- 1 ADMIN 197121 37 Feb  2 19:40 README.md
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 09:47 SpringSMSApp/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  6 12:51 TestApp/
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git log
+commit 3da1035336c05d3e79a83589f2ad87dc1cfadf84 (HEAD -> master, origin/master)
+Author: kaushal <kaushalbca15@gmail.com>
+Date:   Fri Feb 2 19:41:51 2018 +0530
+
+    aaaa
+
+commit 47907d507b7ca49ec0eba35334254c5c46086813
+Author: kaushal <kaushalbca15@gmail.com>
+Date:   Fri Feb 2 19:35:20 2018 +0530
+
+    I addes one JMSApps
+
+commit 1e2cd0739215a651646977759fccf52b74874e9a
+Author: kaushalkbca15 <33993582+kaushalkbca15@users.noreply.github.com>
+Date:   Fri Feb 2 11:57:21 2018 +0530
+
+    Update README.md
+
+commit d559fa3abd89fb34e38863d3d9f096f0643260b2
+Author: kaushalkbca15 <33993582+kaushalkbca15@users.noreply.github.com>
+Date:   Fri Feb 2 10:32:17 2018 +0530
+
+    Initial commit
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ clear
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git remote -v
+origin  https://github.com/kaushalkbca15/JavaMail (fetch)
+origin  https://github.com/kaushalkbca15/JavaMail (push)
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git remote add java https://github.com/kaushalkbca15/javagit.git
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git remote -v
+java    https://github.com/kaushalkbca15/javagit.git (fetch)
+java    https://github.com/kaushalkbca15/javagit.git (push)
+origin  https://github.com/kaushalkbca15/JavaMail (fetch)
+origin  https://github.com/kaushalkbca15/JavaMail (push)
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        PaginationApps/
+        SpringSMSApp/
+        TestApp/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git add .
+warning: adding embedded git repository: PaginationApps
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> PaginationApps
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached PaginationApps
+hint:
+hint: See "git help submodule" for more information.
+warning: adding embedded git repository: SpringSMSApp
+warning: adding embedded git repository: TestApp
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git add --all
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   PaginationApps
+        new file:   SpringSMSApp
+        new file:   TestApp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   PaginationApps (untracked content)
+        modified:   TestApp (untracked content)
+
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git commit -m"this  is java"
+[master e858a84] this  is java
+ 3 files changed, 3 insertions(+)
+ create mode 160000 PaginationApps
+ create mode 160000 SpringSMSApp
+ create mode 160000 TestApp
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   PaginationApps (untracked content)
+        modified:   TestApp (untracked content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ ls
+ClientApp/  JavaMailApp/  PaginationApps/  Provider/  README.md  SpringSMSApp/  TestApp/
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git branch
+  TL
+* master
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ git push -u java master
+Counting objects: 70, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (48/48), done.
+Writing objects: 100% (70/70), 13.26 KiB | 1.89 MiB/s, done.
+Total 70 (delta 0), reused 57 (delta 0)
+To https://github.com/kaushalkbca15/javagit.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'java'.
+
+ADMIN@KARTHIKIT MINGW64 /d/kaushal/GitApps (master)
+$ cd
+
+ADMIN@KARTHIKIT MINGW64 ~
+$ mkdir abcd
+cd
+ADMIN@KARTHIKIT MINGW64 ~
+$ cd abcd
+
+ADMIN@KARTHIKIT MINGW64 ~/abcd
+$ git clone https://github.com/kaushalkbca15/javagit.git
+Cloning into 'javagit'...
+remote: Counting objects: 70, done.
+remote: Compressing objects: 100% (48/48), done.
+remote: Total 70 (delta 0), reused 70 (delta 0), pack-reused 0
+Unpacking objects: 100% (70/70), done.
+
+ADMIN@KARTHIKIT MINGW64 ~/abcd
+$ ls
+javagit/
+
+ADMIN@KARTHIKIT MINGW64 ~/abcd
+$ cd javagit/
+
+ADMIN@KARTHIKIT MINGW64 ~/abcd/javagit (master)
+$ ll
+total 5
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 10:14 JavaMailApp/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 10:14 PaginationApps/
+-rw-r--r-- 1 ADMIN 197121 37 Feb  9 10:14 README.md
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 10:14 SpringSMSApp/
+drwxr-xr-x 1 ADMIN 197121  0 Feb  9 10:14 TestApp/
+
+ADMIN@KARTHIKIT MINGW64 ~/abcd/javagit (master)
+$
